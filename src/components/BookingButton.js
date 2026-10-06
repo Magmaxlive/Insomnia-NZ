@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 function BookingButton({Bgcolor='bg-cream',text='get tickets',textColor='text-ink'}) {
   return (
-    <a href={BookingLink} target='_blank' className={`${Bgcolor} ${textColor} px-4 py-2 tracking-wider uppercase h-fit font-medium  items-center font-highlight text-xl rounded-md text-center flex gap-2 hover:bg-light`}>
+    <a href={BookingLink} target='_blank' className={`${Bgcolor} ${textColor} px-4 py-2 tracking-wider uppercase w-fit h-fit font-medium  items-center font-highlight text-xl rounded-md text-center flex gap-2 hover:bg-light`}>
       {text}     <ArrowRight />
 
     </a>
