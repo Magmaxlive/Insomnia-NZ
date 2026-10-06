@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
-:root {
- 
-}
 
 @theme inline {
- 
+ --font-montserrat: var(--font-montserrat);
+ --font-bebas-neue: var(--font-bebas-neue);
 }
 
 
