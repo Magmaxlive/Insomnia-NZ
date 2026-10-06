@@ -10,6 +10,6 @@ export default {
   },
   fontFamily:{
     body:['var(--font-montserrat)','serif'],
-    higlight:['var(--font-bebas-neue)','serif']
+    highlight:['var(--font-bebas-neue)','serif']
   }
 };

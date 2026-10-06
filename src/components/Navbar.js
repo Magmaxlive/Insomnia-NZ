@@ -1,11 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
+import BookingButton from './BookingButton'
 
 function Navbar() {
   return (
-    <div className='px-8 py-4 bg-ink border-b border-line'>
-        <div className="max-w-7xl mx-auto flex justify-between gap-5">
-            <Image alt='insomnia logo' width={70} height={60} loading='eager' src='/images/logo.png'/>
+    <div className='sticky px-8 py-4 bg-ink border-b border-line backdrop-blur'>
+        <div className="max-w-7xl mx-auto flex justify-between gap-5 items-center">
+            <Image alt='insomnia logo' width={60} height={60} loading='eager' src='/images/logo.png'/>
+            <BookingButton/>
         </div>
     </div>
   )

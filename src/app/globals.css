@@ -1,15 +1,17 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
 
 @theme inline {
- --font-montserrat: var(--font-montserrat);
- --font-bebas-neue: var(--font-bebas-neue);
+ --font-body: var(--font-montserrat), sans-serif;
+ --font-highlight: var(--font-bebas-neue), sans-serif;
 
  --color-cream : #c39b6d;
  --color-ink : #0a0909;
  --color-night: #2a2522;
  --color-mute : #9a9089;
  --color-light: #f4efe8;
+ --color-line : #2a2522;
  --color-peach : #ebbf97;
 
 }
