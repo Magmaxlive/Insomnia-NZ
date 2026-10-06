@@ -1,0 +1,1 @@
+export const BookingLink='https://www.eventfinda.co.nz/2026/insomnia-by-mentalist-aathi/auckland/manukau-city'

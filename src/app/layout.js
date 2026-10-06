@@ -1,5 +1,6 @@
 import { Montserrat,Bebas_Neue } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
       className={`${montserrat.variable} ${bebasNeue.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar/>
+        {children}
+        </body>
     </html>
   );
 }
