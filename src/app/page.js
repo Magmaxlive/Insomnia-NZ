@@ -1,7 +1,7 @@
 import AboutSection from "@/components/AboutSection";
+import EventSection from "@/components/EventSection";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <Hero/>
       <Marquee/>
       <AboutSection/>
+      <EventSection/>
     </div>
   );
 }

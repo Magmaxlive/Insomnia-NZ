@@ -33,3 +33,20 @@ body {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* Ticket cutout notches at the perforation line (desktop only).
+   Right stub is w-90 = 22.5rem = 360px, so notches sit at calc(100% - 360px). */
+@media (min-width: 768px) {
+  .ticket-cut {
+    -webkit-mask-image:
+      radial-gradient(circle 14px at calc(100% - 360px) 0px, transparent 99%, #000 100%),
+      radial-gradient(circle 14px at calc(100% - 360px) 100%, transparent 99%, #000 100%),
+      linear-gradient(#000, #000);
+    mask-image:
+      radial-gradient(circle 14px at calc(100% - 360px) 0px, transparent 99%, #000 100%),
+      radial-gradient(circle 14px at calc(100% - 360px) 100%, transparent 99%, #000 100%),
+      linear-gradient(#000, #000);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+}
