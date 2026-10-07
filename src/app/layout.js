@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         fbq('init', '2564257914398166');
         fbq('track', 'PageView');`}
         </script>
-          <noscript><img height="1" width="1" style="display:none"
+          <noscript><img height="1" width="1" style={{display:'none'}}
           src="https://www.facebook.com/tr?id=2564257914398166&ev=PageView&noscript=1"
           /></noscript>
       <body className="min-h-full flex flex-col">
