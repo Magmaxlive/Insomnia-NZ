@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import CountDown from './CountDown'
 import BookingButton from './BookingButton'
+import { Calendar, MapPin } from 'lucide-react'
 
 const content={
   "eyebrow": "7 entertainments & SOU STUDIO HOUSE",
@@ -47,7 +48,7 @@ function Hero() {
     <div className='relative overflow-hidden px-8 py-22 bg-ink'>
         <div className="pointer-events-none absolute inset-0">
             <Image src={content.heroBg} fill alt="" priority className='object-cover object-center' />
-            <div className="absolute inset-0 bg-ink/90 lg:bg-ink/92" />
+            <div className="absolute inset-0 bg-ink/90 lg:bg-ink/90" />
         </div>
         <div className="relative max-w-7xl mx-auto flex flex-col items-center text-center gap-10 ">
             <div className="w-full flex flex-col items-center gap-8">
@@ -56,39 +57,36 @@ function Hero() {
                     <Image src={content.image} fill alt="aathi's insomnia" className='object-contain' />
                 </div>
 
-                <div className="flex flex-col uppercase text-base text-light font-semibold">
+                <div className="flex flex-col uppercase text-xs md:text-base text-light font-semibold">
                     <p>{content.description.line_1}</p>
                     <p className='text-cream'>{content.description.line_2} <span className='text-light'>{content.description.line_3}</span> </p>
                 </div>
 
             {/* info cards */}
-                <div className="w-full mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                    <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex flex-col gap-2 transition-all hover:border-cream/40 hover:bg-ink/70">
-                        <span className="uppercase text-[10px] tracking-[0.3em] font-medium text-cream">When</span>
-                        <span className="font-highlight text-2xl text-light tracking-wide">
+                <div className="w-full mt-6 flex md:flex-row flex-col justify-center gap-6 text-left">
+                    <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex items-center gap-4 transition-all hover:border-cream/40 hover:bg-ink/70">
+                        <Calendar className="w-6 h-6 text-cream shrink-0" strokeWidth={1.5} />
+                        <span className="font-highlight text-xl md:text-2xl text-light tracking-wide">
                             {content.event.date.weekday.slice(0,3)} {content.event.date.day} {content.event.date.month.split(' ').pop()}
                             <span className="text-mute mx-2">·</span>
                             {content.event.time}
                         </span>
                     </div>
 
-                    <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex flex-col gap-2 transition-all hover:border-cream/40 hover:bg-ink/70">
-                        <span className="uppercase text-[10px] tracking-[0.3em] font-medium text-cream">Where</span>
-                        <span className="font-highlight text-2xl text-light tracking-wide">
+                    <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex items-center gap-4 transition-all hover:border-cream/40 hover:bg-ink/70">
+                        <MapPin className="w-6 h-6 text-cream shrink-0" strokeWidth={1.5} />
+                        <span className="font-highlight text-xl md:text-2xl text-light tracking-wide">
                             {content.event.venue}
                             <span className="text-mute">, {content.event.location}</span>
                         </span>
                     </div>
 
-                    <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex flex-col gap-2 transition-all hover:border-cream/40 hover:bg-ink/70">
-                        <span className="uppercase text-[10px] tracking-[0.3em] font-medium text-cream">{content.countdown.label}</span>
-                        <CountDown target={content.event.iso}/>
-                    </div>
-
-                    <div className="rounded-md border border-cream/30 bg-gradient-to-br from-ink/60 to-cream/10 backdrop-blur-md px-6 py-5 flex items-center justify-center transition-all hover:border-cream/60">
-                        <BookingButton text='Book now'/>
-                    </div>
+                    
                 </div>
+                <CountDown target={content.event.iso}/>
+
+                <BookingButton text='book your tickets'/>
+                
 
             </div>
 

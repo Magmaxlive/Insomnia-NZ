@@ -49,10 +49,10 @@ function CountDown({ target = '2026-10-17T18:00:00+13:00' }) {
 
   return (
     <div className="font-highlight text-2xl text-light tracking-wide flex gap-3">
-      <Unit value={t.days} label="d" />
-      <Unit value={t.hrs} label="h" />
-      <Unit value={t.mins} label="m" />
-      <Unit value={t.seconds} label="s" />
+      <Unit value={t.days} label="days" />
+      <Unit value={t.hrs} label="hrs" />
+      <Unit value={t.mins} label="mins" />
+      <Unit value={t.seconds} label="sec" />
     </div>
   )
 }
