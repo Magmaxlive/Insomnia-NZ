@@ -1,11 +1,19 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
-:root {
- 
-}
 
 @theme inline {
- 
+ --font-body: var(--font-montserrat), sans-serif;
+ --font-highlight: var(--font-bebas-neue), sans-serif;
+
+ --color-cream : #c39b6d;
+ --color-ink : #0a0909;
+ --color-night: #2a2522;
+ --color-mute : #9a9089;
+ --color-light: #f4efe8;
+ --color-line : #2a2522;
+ --color-peach : #ebbf97;
+
 }
 
 
@@ -14,4 +22,31 @@ body {
   
   font-family: "Montserrat", sans-serif;
 
+}
+
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Ticket cutout notches at the perforation line (desktop only).
+   Right stub is w-90 = 22.5rem = 360px, so notches sit at calc(100% - 360px). */
+@media (min-width: 768px) {
+  .ticket-cut {
+    -webkit-mask-image:
+      radial-gradient(circle 14px at calc(100% - 360px) 0px, transparent 99%, #000 100%),
+      radial-gradient(circle 14px at calc(100% - 360px) 100%, transparent 99%, #000 100%),
+      linear-gradient(#000, #000);
+    mask-image:
+      radial-gradient(circle 14px at calc(100% - 360px) 0px, transparent 99%, #000 100%),
+      radial-gradient(circle 14px at calc(100% - 360px) 100%, transparent 99%, #000 100%),
+      linear-gradient(#000, #000);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
 }
