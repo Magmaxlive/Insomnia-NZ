@@ -46,7 +46,7 @@ const content={
 
 function Hero() {
   return (
-    <div className='relative overflow-hidden px-8 pt-26 pb-22 bg-ink'>
+    <div className='relative overflow-hidden px-8 lg:pt-32 pt-28 pb-22 bg-ink'>
         <div className="pointer-events-none absolute inset-0">
             <Image src={content.heroBg} fill alt="" priority className='object-cover object-center' />
             <div className="absolute inset-0 bg-ink/90 lg:bg-ink/90" />

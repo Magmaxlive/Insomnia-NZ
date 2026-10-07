@@ -20,7 +20,7 @@ const content={
 
 function AboutSection() {
   return (
-    <div className='px-8 py-20 bg-ink'>
+    <div className='px-8 py-20 bg-ink' id='experience'>
         <div className="max-w-7xl mx-auto grid grid-cols-1 tablet:grid-cols-2 gap-15">
             <div className="relative aspect-[3/2] tablet:aspect-square w-full group">
                 {/* soft glow */}

@@ -40,7 +40,7 @@ const content={
 
 function EventSection() {
   return (
-    <div className='relative overflow-hidden px-8 py-15 bg-gradient-to-br from-ink via-night to-ink'>
+    <div className='relative overflow-hidden px-8 py-15 bg-gradient-to-br from-ink via-night to-ink' id='event'>
         {/* ambient radial glows */}
         <div className="pointer-events-none absolute -top-32 -right-32 w-[32rem] h-[32rem] bg-cream/15 blur-[120px] rounded-full" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 w-[32rem] h-[32rem] bg-peach/10 blur-[120px] rounded-full" />
