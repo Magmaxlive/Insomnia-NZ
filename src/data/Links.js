@@ -1,1 +1,2 @@
 export const BookingLink='https://www.eventfinda.co.nz/2026/insomnia-by-mentalist-aathi/auckland/manukau-city'
+export const VenueLink='https://www.google.com/maps/dir//Due+Drop+Events+Centre,+770+Great+South+Road,+Wiri,+Manukau+2104/'
