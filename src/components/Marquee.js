@@ -3,11 +3,12 @@ import { Dot } from 'lucide-react'
 
 
 const items = [
-  'one icon',
-  'one stage',
-  'one unforgettable evening',
-  'save 5% for groups of 10+',
-  'book on ticket master',
+  'ILLUSION ',
+  'MPOSSIBLE MOMENTS ',
+  'one unforgettable night',
+  'Dew Drop Events Centre',
+  'Fri 30 OCT·07:00 PM',
+  'mind reading',
 ]
 
 function Row(){
@@ -27,7 +28,7 @@ function Row(){
 
 function Marquee() {
   return (
-    <div className="bg-cream py-5 md:text-2xl text-xl overflow-hidden group">
+    <div className="bg-cream py-5 md:text-3xl text-xl overflow-hidden group">
         <div className='flex w-max animate-marquee group-hover:[animation-play-state:paused]'>
             <Row/>
             <Row/>
