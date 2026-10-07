@@ -3,6 +3,7 @@ import Image from 'next/image'
 import CountDown from './CountDown'
 import BookingButton from './BookingButton'
 import { Calendar, MapPin } from 'lucide-react'
+import { VenueLink } from '@/data/Links'
 
 const content={
   "eyebrow": "7 entertainments & SOU STUDIO HOUSE",
@@ -75,17 +76,17 @@ function Hero() {
 
                     <div className="rounded-md border border-light/10 bg-ink/60 backdrop-blur-md px-6 py-5 flex items-center gap-4 transition-all hover:border-cream/40 hover:bg-ink/70">
                         <MapPin className="w-6 h-6 text-cream shrink-0" strokeWidth={1.5} />
-                        <span className="font-highlight text-xl md:text-2xl text-light tracking-wide">
+                        <a href={VenueLink} target='_blank' className="font-highlight text-xl md:text-2xl text-light tracking-wide">
                             {content.event.venue}
                             <span className="text-mute">, {content.event.location}</span>
-                        </span>
+                        </a>
                     </div>
 
                     
                 </div>
                 <CountDown target={content.event.iso}/>
 
-                <BookingButton text='book your tickets'/>
+                <BookingButton text='book your tickets' p='px-6 py-3' textSize='text-2xl'/>
                 
 
             </div>

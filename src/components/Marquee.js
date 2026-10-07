@@ -28,7 +28,7 @@ function Row(){
 
 function Marquee() {
   return (
-    <div className="bg-cream py-5 md:text-3xl text-xl overflow-hidden group">
+    <div className="bg-peach/60 py-3 md:text-2xl text-xl overflow-hidden group">
         <div className='flex w-max animate-marquee group-hover:[animation-play-state:paused]'>
             <Row/>
             <Row/>
