@@ -1,3 +1,4 @@
+import AboutSection from "@/components/AboutSection";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Image from "next/image";
@@ -7,7 +8,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Marquee/>
-      
+      <AboutSection/>
     </div>
   );
 }
