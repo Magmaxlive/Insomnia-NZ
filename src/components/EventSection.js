@@ -25,7 +25,7 @@ const content={
       "category": "MENTALISM IN ENGLISH",
       "show": "Aadhi’s INSOMNIA, Mentalism in English",
       "when": "Friday, 30 October 2026, 7:00 PM",
-      "where": "Dew Drop Events Centre, Auckland",
+      "where": "Due Drop Events Centre, Auckland",
       "duration": "Approximately 2.5 hours, no interval",
       "tickets": "Silver from $62 · Gold from $83",
       "presented_by": "7 Entertainment & SOU Studio House",

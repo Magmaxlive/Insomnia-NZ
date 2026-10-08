@@ -5,7 +5,7 @@ import Image from 'next/image'
 const infoItems = [
   { label: 'Date', value: 'Fri, 30 Oct 2026' },
   { label: 'Time', value: '7:00 PM' },
-  { label: 'Venue', value: 'Dew Drop Events, Auckland' },
+  { label: 'Venue', value: 'Due Drop Events, Auckland' },
   { label: 'Tickets', value: 'From $62' },
 ]
 

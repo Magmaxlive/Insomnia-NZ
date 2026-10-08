@@ -21,7 +21,7 @@ const content={
       "weekday": "Friday"
     },
     "time": "07:00 PM",
-    "venue": "Dew Drop Events Centre",
+    "venue": "Due Drop Events Centre",
     "location": "Auckland",
     "country": "New Zealand",
     'iso':"2026-10-30T19:00:00+13:00"
