@@ -3,7 +3,7 @@ import Image from 'next/image'
 import SectionHeading from './SectionHeading'
 import { ArrowRight } from 'lucide-react'
 import BookingButton from './BookingButton'
-import { SponsorsCard, presentedBy, supportedBy } from './SponsorsSection'
+import { SponsorsCard, presentedBy, sponsors } from './SponsorsSection'
 import EventCard from './EventCard'
 
 function InfoCell({ label, value, className = '' }) {
@@ -69,8 +69,8 @@ function EventSection() {
                     items={presentedBy}
                 />
                 <SponsorsCard
-                    label='Title Sponsor'
-                    items={supportedBy}
+                    label='Our Sponsors'
+                    items={sponsors}
                 />
             </div>
 

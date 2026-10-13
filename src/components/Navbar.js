@@ -37,7 +37,7 @@ function Navbar() {
             <Image alt='insomnia logo' width={60} height={60} loading='eager' src='/images/logo.png'/>
             <div className="flex gap-6 hidden lg:flex">
               {links.map((i,index)=>(
-                <Link to={i.link} smooth={true} offset={-100} className='cursor-pointer uppercase font-medium font-highlight  tracking-widest text-base text-light'> {i.label}</Link>
+                <Link key={index} to={i.link} smooth={true} offset={-100} className='cursor-pointer uppercase font-medium font-highlight  tracking-widest text-base text-light'> {i.label}</Link>
               ))}
             </div>
             <div className="hidden lg:flex">

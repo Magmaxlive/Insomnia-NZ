@@ -7,17 +7,25 @@ export const presentedBy = [
   { name: 'SOU Studio House', src: '/images/sou.png' },
 ]
 
-export const supportedBy = [
-  { name: 'Kripa financial solutions', src: '/images/kripalogo.svg' },
-  
+export const sponsors = [
+  { name: 'Kripa Financial Solutions', src: '/images/kripalogo.svg', tier: 'Title Sponsor' },
+  { name: 'Eco Travels', src: '/images/eco.png', size: 'sm', tier: 'Sponsor' },
 ]
 
-function LogoRow({ items }) {
+const sizes = {
+  default: 'h-16 w-36 lg:h-20 lg:w-44',
+  sm: 'h-10 w-24 lg:h-12 lg:w-28',
+}
+
+function LogoRow({ items, stack = false }) {
   return (
-    <div className='flex flex-wrap justify-center items-center gap-10 md:gap-14'>
+    <div className={`flex flex-wrap justify-center items-center gap-10 md:gap-16 ${stack ? 'flex-col' : ''}`}>
       {items.map((s) => (
-        <div key={s.name} className='flex flex-col items-center gap-6'>
-          <div className='relative h-16 w-36 lg:h-20 lg:w-44'>
+        <div key={s.name} className='flex flex-col items-center gap-3'>
+          {s.tier && (
+            <span className='uppercase text-[9px] tracking-[0.3em] text-cream'>{s.tier}</span>
+          )}
+          <div className={`relative ${sizes[s.size] || sizes.default}`}>
             <Image
               src={s.src}
               alt={s.name}
@@ -25,14 +33,14 @@ function LogoRow({ items }) {
               className='object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity'
             />
           </div>
-          <p className='text-light/60 text-xs tracking-wide'>{s.name}</p>
+          {/* <p className='text-light/60 text-xs tracking-wide'>{s.name}</p> */}
         </div>
       ))}
     </div>
   )
 }
 
-export function SponsorsCard({ label, items=[], tagline }) {
+export function SponsorsCard({ label, items=[], tagline, stack=false }) {
   return (
     <div className='relative bg-night/50 border border-light/10 rounded-2xl px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12 backdrop-blur-sm'>
       {/* pill label */}
@@ -41,7 +49,7 @@ export function SponsorsCard({ label, items=[], tagline }) {
       </span>
 
       <div className='flex flex-col gap-6 items-center'>
-        <LogoRow items={items} />
+        <LogoRow items={items} stack={stack} />
         {tagline && (
           <p className='text-light/60 text-sm md:text-base text-center max-w-xl'>{tagline}</p>
         )}
