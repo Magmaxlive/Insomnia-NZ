@@ -1,19 +1,7 @@
 import React from 'react'
-import Image from 'next/image'
 import SectionHeading from './SectionHeading'
-import { ArrowRight } from 'lucide-react'
-import BookingButton from './BookingButton'
-import { SponsorsCard, presentedBy, sponsors } from './SponsorsSection'
+import { SponsorsBoard } from './SponsorsSection'
 import EventCard from './EventCard'
-
-function InfoCell({ label, value, className = '' }) {
-  return (
-    <div className={`flex flex-col gap-1 py-4 ${className}`}>
-      <span className="uppercase text-[10px] tracking-[0.2em] text-ink/60">{label}</span>
-      <span className="text-ink text-base md:text-lg">{value}</span>
-    </div>
-  )
-}
 
 const content={
   "section": {
@@ -63,15 +51,8 @@ function EventSection() {
 
                 <EventCard content={content}/>
               
-             <div className="grid grid-cols-1 tablet:grid-cols-2 gap-10 mt-6">
-                <SponsorsCard
-                    label='Proudly Presented By'
-                    items={presentedBy}
-                />
-                <SponsorsCard
-                    label='Our Sponsors'
-                    items={sponsors}
-                />
+            <div className="mt-10">
+                <SponsorsBoard />
             </div>
 
         </div>
