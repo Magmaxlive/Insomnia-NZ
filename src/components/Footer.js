@@ -8,7 +8,7 @@ const content={
 
 function Footer() {
   return (
-    <div className='py-5 px-8 bg-ink border-t border-line'>
+    <div id='contact' className='py-5 px-8 bg-ink border-t border-line'>
         <div className="max-w-7xl mx-auto flex tablet:flex-row flex-col justify-between text-center items-center gap-6">
             <div className="flex flex-col gap-1 justify-center items-center tablet:justify-start tablet:items-start">
                 <Image alt='insomnia logo' width={60} height={60} loading='eager' src='/images/logo.png'/>

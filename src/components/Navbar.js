@@ -14,7 +14,16 @@ const links=[
   {
     label:'event',
     link:'event',
-  }
+  },
+  {
+    label:'sponsors',
+    link:'sponsors',
+  },
+  {
+    label:'spotlight',
+    link:'buzz',
+  },
+ 
 ]
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)

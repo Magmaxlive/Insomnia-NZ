@@ -51,7 +51,7 @@ function EventSection() {
 
                 <EventCard content={content}/>
               
-            <div className="mt-10">
+            <div id='sponsors' className="mt-10 scroll-mt-24">
                 <SponsorsBoard />
             </div>
 
