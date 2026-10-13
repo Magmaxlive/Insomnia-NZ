@@ -25,7 +25,7 @@ function Unit({ value, label }) {
 
 
 
-function CountDown({ target = '2026-10-17T18:00:00+13:00' }) {
+function CountDown({ target = '2026-10-17T18:30:00+13:00' }) {
   const targetMs = new Date(target).getTime()
   const [t, setT] = useState(null)
 

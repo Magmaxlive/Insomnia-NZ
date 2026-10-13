@@ -20,7 +20,7 @@ const content={
       "month": "2026 OCT",
       "weekday": "Friday"
     },
-    "time": "07:00 PM",
+    "time": "6:30 PM",
     "venue": "Due Drop Events Centre",
     "location": "Auckland",
     "country": "New Zealand",

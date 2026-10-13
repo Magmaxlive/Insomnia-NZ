@@ -6,7 +6,7 @@ import { Dot, X } from 'lucide-react'
 
 const event = {
   "date": "Fri 30 OCT 2026",
-  "time": "7:00 PM",
+  "time": "6:30 PM",
 }
 
 function FloatingBtn() {

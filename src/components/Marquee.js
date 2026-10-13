@@ -7,7 +7,7 @@ const items = [
   'MPOSSIBLE MOMENTS ',
   'one unforgettable night',
   'Due Drop Events Centre',
-  'Fri 30 OCT·07:00 PM',
+  'Fri 30 OCT·06:30 PM',
   'mind reading',
 ]
 
