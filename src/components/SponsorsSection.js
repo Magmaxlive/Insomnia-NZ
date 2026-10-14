@@ -15,7 +15,7 @@ export const sponsorTiers = [
     label: 'Presented By',
     size: 'lg',
     items: [
-      { name: '7 Entertainment', src: '/images/7.webp', blacken: true },
+      { name: '7 Entertainment', src: '/images/7.jpg', unoptimized: true, tileColor: '#232021', bordered: true },
       { name: 'SOU Studio House', src: '/images/sou.png' },
     ],
   },
@@ -45,11 +45,24 @@ export const sponsorTiers = [
   },
 ]
 
-function LogoTile({ src, name, size = 'default', blacken = false }) {
+function LogoTile({ src, name, size = 'default', blacken = false, darkTile = false, tileColor, bordered = false, boost = false, scale = 1, unoptimized = false }) {
+  const tileClass = tileColor ? '' : darkTile ? 'bg-ink' : 'bg-light'
   return (
-    <div className='bg-light rounded-lg p-4 flex items-center justify-center'>
+    <div
+      className={`${tileClass} ${bordered ? 'border border-light/45' : ''} rounded-lg p-4 flex items-center justify-center overflow-hidden`}
+      style={tileColor ? { backgroundColor: tileColor } : undefined}
+    >
       <div className={`relative ${sizes[size] || sizes.default}`}>
-        <Image src={src} alt={name} fill className={`object-contain ${blacken ? 'brightness-0' : ''}`} />
+        <Image
+          src={src}
+          alt={name}
+          fill
+          quality={100}
+          sizes="(max-width: 1024px) 240px, 340px"
+          unoptimized={unoptimized}
+          style={scale !== 1 ? { transform: `scale(${scale})` } : undefined}
+          className={`object-contain ${blacken ? 'brightness-0' : ''} ${boost ? 'contrast-125 saturate-150 brightness-90' : ''}`}
+        />
       </div>
     </div>
   )
@@ -63,7 +76,7 @@ function TierGroup({ label, items, size }) {
       </span>
       <div className='flex flex-wrap justify-center items-center gap-5 md:gap-8'>
         {items.map((item) => (
-          <LogoTile key={item.name} src={item.src} name={item.name} size={size} blacken={item.blacken} />
+          <LogoTile key={item.name} src={item.src} name={item.name} size={item.size || size} blacken={item.blacken} darkTile={item.darkTile} tileColor={item.tileColor} bordered={item.bordered} boost={item.boost} scale={item.scale} unoptimized={item.unoptimized} />
         ))}
       </div>
     </div>

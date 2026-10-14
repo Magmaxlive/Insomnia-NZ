@@ -5,9 +5,9 @@ import Script from 'next/script'
 import SectionHeading from './SectionHeading'
 
 const posts = [
-  'https://www.instagram.com/reel/DeJUitCDh_-/',
-  'https://www.instagram.com/reel/DeVUJzmtgDU/',
-  'https://www.instagram.com/reel/DePvf7UTmQN/',
+  'https://www.instagram.com/reel/DeYqmKCgqKP/',
+  'https://www.instagram.com/reel/DebCIw-HO4F/',
+  'https://www.instagram.com/reel/DdvQEGQERjI/',
 ]
 
 function SocialSection() {
